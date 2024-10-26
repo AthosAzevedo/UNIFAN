@@ -1,0 +1,145 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #666;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.task-lists {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.task-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    min-height: 150px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e9ecef;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+li:hover {
+    background: #d3d3d3;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+button.delete {
+    background: red;
+    color: white;
+}
+
+button.edit {
+    background: #ffc107;
+    color: white;
+}
+
+button.complete {
+    background: #28a745;
+    color: white;
+}
+
+
+
+@media (max-width: 600px) {
+    input[type="text"] {
+        width: calc(100% - 90px);
+    }
+
+    .task-lists {
+        flex-direction: column;
+    }
+
+    .task-column {
+        margin: 10px 0;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
